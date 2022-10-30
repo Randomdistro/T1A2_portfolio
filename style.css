@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+}
+
+.floor {
+  background-image: url("floor.png");
+  background-position: top, center;
+  background-repeat: no-repeat;
+}
+
+.devcredit {
+  position: relative;
+  top: 100px;
+  flex: auto;
+  flex-direction: column;
+  font-family: Arial;
+  font-weight: 100;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.navigation {
+  position: relative;
+  top: 122px;
+  left: 116px;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 2px;
+  height: 32px;
+  background-color: rgb(99, 141, 158);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  justify-content: center, space-between;
+  list-style: none;
+}
+
+li {
+  display: inline-flex;
+  margin: 20px, 3px;
+  text-align: center center;
+}
+
+a {
+  flex: auto;
+  margin: 12.5%, 0%;
+  padding: 3px;
+  text-decoration: none;
+  font-family: Arial;
+  font-stretch: ultra-expanded;
+  color: black;
+  font-size: 1.5em;
+  border-width: 2px;
+  border: rgb(99, 141, 158), 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
