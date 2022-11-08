@@ -1,65 +1,174 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
+.card-container-1 {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  border: radius 2rem;
+  margin: 1rem;
 }
 
-.floor {
-  background-image: url("floor.png");
-  background-position: top, center;
-  background-repeat: no-repeat;
+.cardface-1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: rgb(233, 222, 210);
+  border: solid 5px purple;
+}
+
+.cardname-1 {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 7px;
+  padding: 4px;
+  background-color: rgb(240, 195, 150);
+  border: solid 5px purple;
+  border-radius: 1rem;
+  font-size: 1.6em;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.char-img-1 {
+  max-width: 320px;
+  max-height: auto;
+  margin-top: 24px;
+}
+
+.img-1 {
+  max-height: 100%;
+  border: solid 5px purple;
+  border-radius: 1rem;
+}
+
+.stats-1 {
+  width: fit-content;
+  height: fit-content;
+  margin-top: -26px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: rgb(240, 195, 150);
+  border: solid 5px purple;
+  border-radius: 1rem;
+  font-size: 1.6em;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.player-stats-1 {
+  display: inline;
+  width: 86%;
+}
+
+.attributes-1 {
+  text-align: left;
+  float: left;
+  margin: 0;
+}
+
+.data-1 {
+  text-align: right;
+  float: right;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, black, aquamarine);
 }
 
 .devcredit {
-  position: relative;
-  top: 100px;
-  flex: auto;
-  flex-direction: column;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.navigation {
-  position: relative;
-  top: 122px;
-  left: 116px;
-  justify-content: space-between;
-  width: fit-content;
-  padding: 2px;
-  height: 32px;
-  background-color: rgb(99, 141, 158);
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  justify-content: center, space-between;
-  list-style: none;
-}
-
-li {
-  display: inline-flex;
-  margin: 20px, 3px;
-  text-align: center center;
-}
-
-a {
-  flex: auto;
-  margin: 12.5%, 0%;
-  padding: 3px;
-  text-decoration: none;
-  font-family: Arial;
-  font-stretch: ultra-expanded;
+  font-size: 2rem;
   color: black;
-  font-size: 1.5em;
-  border-width: 2px;
-  border: rgb(99, 141, 158), 2px;
+  margin-top: 4vh;
+  color: white;
+  font-size: 2vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(33, 31, 39);
+}
+
+.image {
+  border-radius: 50%;
+  position: absolute;
+  margin-right: 85%;
+  margin-top: -5vh;
+  z-index: 5;
+}
+.image .logo {
+  border-radius: 50%;
+  border: solid rgb(33, 2, 16);
+  width: 14.2857142857vw;
+}
+
+.title-name {
+  width: 100%;
+  height: 15vh;
+  background-color: aquamarine;
+  text-align: end;
+}
+.title-name .name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  color: black;
+  padding-right: 6vw;
+  font-size: 6vw;
+  color: rgb(233, 216, 200);
+  text-shadow: 0.4vh 0.6vh 1vh rgb(14, 16, 17);
+}
+
+.container {
+  height: 8vh;
+  margin-left: 15vw;
+  width: 80vw;
+  margin-right: 5vw;
+}
+.container .nav_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  color: black;
+}
+.container .nav_links .a {
+  text-decoration: none;
+  text-shadow: 2px 4px 8px black;
+  color: rgb(122, 63, 205);
+  font-size: 3vw;
+}
+.container .a:hover {
+  transition: 0.3s;
+  color: rgb(164, 171, 239);
+  text-shadow: rgb(237, 190, 146);
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map */

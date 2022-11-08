@@ -1,72 +1,224 @@
- $color-1:rgb(191, 163, 214);
- $color-2: rgb(99, 141, 158);
- $color-3: rgb(85, 64, 102);
- $color-4: rgb(165, 119, 101);
- $color-5: rgb(116, 52, 168);
- @mixin myfont {
-     font-family: Arial;
-     font-weight: 100;
-     font-size: 1.5em;
- }
- 
- body {
-     margin: 0;
-     padding: 0;
-     background-position: center center;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-size: cover;
-     width: 100%;
- }
- 
- .floor {
-     background-image: url("floor.png");
-     background-position: top, center;
-     background-repeat: no-repeat;
- }
- 
- .devcredit {
-     position: relative;
-     top: 100px;
-     flex: auto;
-     flex-direction: column;
-     @include myfont;
-     text-align: center;
- }
- 
- .navigation {
-     position: relative;
-     top: 122px;
-     left: 116px;
-     justify-content: space-between;
-     width: fit-content;
-     padding: 2px;
-     height: 32px;
-     background-color: $color-2;
- }
- 
- ul {
-     margin: 0;
-     padding: 0;
-     justify-content: center, space-between;
-     list-style: none;
- }
- 
- li {
-     display: inline-flex;
-     margin: 20px, 3px;
-     text-align: center center;
- }
- 
- a {
-     flex: auto;
-     margin: 12.5%, 0%;
-     padding: 3px;
-     text-decoration: none;
-     font-family: Arial;
-     font-stretch: ultra-expanded;
-     color: black;
-     font-size: 1.5em;
-     border-width: 2px;
-     border: $color-2, 2px;
- }
+        $bckgrndcolor:rgb(33, 31, 39);
+        $frgrndcolor:rgb(233, 216, 200);
+        $itemcolordrk: rgb(33, 2, 16);
+        $itemcolorlght: rgb(248, 199, 191);
+        $btncolor: rgb(60, 206, 246);
+        $shadow: rgb(14, 16, 17);
+        @mixin firstfont {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            font-size: 2rem;
+            color: black;
+        }
+        
+        @mixin dsp-navline {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        @mixin dsp-navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        @mixin txt-shdw {
+            text-shadow: 2px, 2px, 5px, $shadow;
+        }
+        
+        %card-container {
+            position: relative;
+            width: 350px;
+            height: 550px;
+            border: radius 2rem;
+            margin: 1rem;
+        }
+        
+        %cardface {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 2rem;
+            background-color: rgb(233, 222, 210);
+            border: solid 5px purple;
+        }
+        
+        %cardname {
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 7px;
+            padding: 4px;
+            background-color: rgb(240, 195, 150);
+            border: solid 5px purple;
+            border-radius: 1rem;
+            font-size: 1.6em;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        %char-img {
+            max-width: 320px;
+            max-height: auto;
+            margin-top: 24px;
+        }
+        
+        %img {
+            max-height: 100%;
+            border: solid 5px purple;
+            border-radius: 1rem;
+        }
+        
+        %stats {
+            width: fit-content;
+            height: fit-content;
+            margin-top: -26px;
+            padding-left: 4px;
+            padding-right: 4px;
+            background-color: rgb(240, 195, 150);
+            border: solid 5px purple;
+            border-radius: 1rem;
+            font-size: 1.6em;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        %player-stats {
+            display: inline;
+            width: 86%;
+        }
+        
+        %attributes {
+            text-align: left;
+            float: left;
+            margin: 0;
+        }
+        
+        %data {
+            text-align: right;
+            float: right;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to bottom right, black, aquamarine);
+        }
+        
+        .devcredit {
+            @include firstfont;
+            margin-top: 4vh;
+            color: white;
+            font-size: calc(8vh * (1/4));
+        }
+        
+        .header {
+            @include dsp-navline();
+            width: 100%;
+            background-color: $bckgrndcolor;
+        }
+        
+        .image {
+            border-radius: 50%;
+            position: absolute;
+            margin-right: 85%;
+            margin-top: -5vh;
+            z-index: 5;
+            .logo {
+                border-radius: 50%;
+                border: solid $itemcolordrk;
+                width: (100vw * (1/7));
+            }
+        }
+        
+        .title-name {
+            width: 100%;
+            height: 15vh;
+            background-color: aquamarine;
+            text-align: end;
+            .name {
+                @include firstfont();
+                padding-right: 6vw;
+                font-size: calc(10vw * (3/5));
+                color: $frgrndcolor;
+                text-shadow: .4vh .6vh 1vh $shadow;
+            }
+        }
+        
+        .container {
+            height: 8vh;
+            margin-left: 15vw;
+            width: 80vw;
+            margin-right: 5vw;
+            .nav_links {
+                @include dsp-navbar();
+                @include firstfont();
+                .a {
+                    text-decoration: none;
+                    text-shadow: 2px 4px 8px black;
+                    color: rgb(122, 63, 205);
+                    font-size: calc(5vw * (3/5));
+                }
+            }
+            .a:hover {
+                transition: 0.3s;
+                color: rgb(164, 171, 239);
+                text-shadow: rgb(237, 190, 146);
+            }
+        }
+        
+        .card-deck {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        
+        .card-container-1 {
+            @extend %card-container;
+        }
+        
+        .cardface-1 {
+            @extend %cardface;
+        }
+        
+        .cardname-1 {
+            @extend %cardname;
+        }
+        
+        .char-img-1 {
+            @extend %char-img;
+        }
+        
+        .img-1 {
+            @extend %img;
+        }
+        
+        .stats-1 {
+            @extend %stats;
+        }
+        
+        .player-stats-1 {
+            @extend %player-stats;
+        }
+        
+        .attributes-1 {
+            @extend %attributes;
+        }
+        
+        .data-1 {
+            @extend %data;
+        }

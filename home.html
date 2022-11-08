@@ -10,30 +10,72 @@
 
 </head>
 
-<body class="floor">
-
+<body class="body">
+    <!--page layout parent-->
     <p class="devcredit">A RandomDistro Dev</p>
-
-    <div class="space-around">
-
+    <!--f>irst child-->
+    <header class="header">
+        <!--title, navbar, flexburger parent-->
+        <div class="image">
+            <!--3rd child, shapes logo-->
+            <img class="logo" src="logo.jpg" alt="james logo">
+        </div>
+        <div class="title-name">
+            <!--2nd child. this is the shape container of the object "name"-->
+            <p class="name">Portfolio 2022: James Tyndall</p>
+            <!-- only 1 item? must be 2nd child's "skin"-->
+        </div>
         <nav>
-            <ul>
-                <li>
-                    <a href="/">home</a>
-                </li>
-
-                <li>
-                    <a href="/">about</a>
-                </li>
-                <li>
-                    <a href="/">randomdistro</a>
-                </li>
-                <li>
-                    <a href="/">contact</a>
-                </li>
-            </ul>
+            <div class="container">
+                <!--4 child, parent of flexnav-->
+                <div class="nav_links">
+                    <!--1st child? may be superfluous-->
+                    <a href="/" class="a">The Man</a>
+                    <!--1st-->
+                    <a href="/" class="a">The Past</a>
+                    <!--2nd-->
+                    <a href="/" class="a">The Future</a>
+                    <!--3rd-->
+                    <a href="/" class="a">Thoughts</a>
+                    <!--4th-->
+                </div>
+            </div>
         </nav>
-    </div>
+
+    </header>
+    <br>
+    <div class="card-deck">
+        <div class="card-container-1">
+            <!--parent container-->
+            <div class="cardface-1">
+                <!--face of parent-->
+                <div class="cardname-1">
+                    <!--1st-->
+                    <p>JAMES TYNDALL</p>
+                </div>
+                <div class="char-img-1">
+                    <!--2nd-->
+                    <img class="img-1" src="james-headshot.png" alt="james-tyndall">
+                </div>
+                <!--3rd-->
+                <div class="stats-1">PLAYER STATS</div>
+                <!--4th-->
+                <br>
+                <div class="player-stats-1">
+                    <!--5th child, 1st parent-->
+                    <article class="attributes-1">
+                        <!--1st-->
+                        <p>NAME <br>AGE<br>STYLE<br>IDEOLOGY<br>POWER<br>STRENGTH<br>WEAKNESS</p>
+                    </article>
+                    <article class="data-1">
+                        <!--2nd-->
+                        <p>James Tyndall<br>43<br>Chaotic Neutral<br>Reponsible Anarchy<br>Catches Falling Objects<br>Eternal Optimism<br>Oblivious to Danger</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+
 </body>
 
 </html>
