@@ -1,0 +1,16 @@
+{
+    "folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../pic assets"
+		},
+		{
+			"path": "../../../profile cards/James T"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cardflex"
+	}
+}

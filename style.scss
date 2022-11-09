@@ -33,6 +33,7 @@
             height: 550px;
             border: radius 2rem;
             margin: 1rem;
+            backface-visibility: hidden;
         }
         
         %cardface {
@@ -45,6 +46,8 @@
             border-radius: 2rem;
             background-color: rgb(233, 222, 210);
             border: solid 5px purple;
+            box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0);
+            Backface-visibility: hidden
         }
         
         %cardname {
@@ -182,17 +185,28 @@
         
         .card-deck {
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
             align-items: flex-start;
         }
         
         .card-container-1 {
             @extend %card-container;
+            .card-container-1:hover {
+                cursor: pointer;
+                transform: rotateY(180deg);
+            }
+        }
+        
+        .cardback {
+            @extend %cardface;
+            background-color: #3a3a3a;
+            transform: rotateY(180deg);
         }
         
         .cardface-1 {
             @extend %cardface;
+            position: relative;
+            transition: transform 1500ms;
         }
         
         .cardname-1 {

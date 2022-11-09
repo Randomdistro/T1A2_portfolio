@@ -1,0 +1,87 @@
+
+        .card-deck {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        
+        .card-container-1 {
+            @extend %card-container;
+            .card-container-1:hover {
+                cursor: pointer;
+                transform: rotateY(180deg);
+            }
+        }
+        
+        .cardback {
+            @extend %cardface;
+            background-color: #3a3a3a;
+            transform: rotateY(180deg);
+        }
+        
+        .cardface-1 {
+            @extend %cardface;
+            position: relative;
+            transition: transform 1500ms;
+        }
+        
+        .cardname-1 {
+            @extend %cardname;
+        }
+        
+        .char-img-1 {
+            @extend %char-img;
+        }
+        
+        .img-1 {
+            @extend %img;
+        }
+        
+        .stats-1 {
+            @extend %stats;
+        }
+        
+        .player-stats-1 {
+            @extend %player-stats;
+        }
+        
+        .attributes-1 {
+            @extend %attributes;
+        }
+        
+        .data-1 {
+            @extend %data;
+        }
+
+          <div class="card-container-1">
+            <div class="cardback"><img src="cardback.png" alt="playing card with jimmie christo on it"></div>
+        </div>
+        <div class="card-container-1">
+            <div class="cardface-1">
+
+                <div class="cardname-1">
+
+                    <p>JAMES TYNDALL</p>
+                </div>
+                <div class="char-img-1">
+                    <!--2nd-->
+                    <img class="img-1" src="james-headshot.png" alt="james-tyndall">
+                </div>
+                <!--3rd-->
+                <div class="stats-1">PLAYER STATS</div>
+                <!--4th-->
+                <br>
+                <div class="player-stats-1">
+                    <!--5th child, 1st parent-->
+                    <article class="attributes-1">
+                        <!--1st-->
+                        <p>NAME <br>AGE<br>STYLE<br>IDEOLOGY<br>POWER<br>STRENGTH<br>WEAKNESS</p>
+                    </article>
+                    <article class="data-1">
+                        <!--2nd-->
+                        <p>James Tyndall<br>43<br>Chaotic Neutral<br>Reponsible Anarchy<br>Catches Falling Objects<br>Eternal Optimism<br>Oblivious to Danger</p>
+                    </article>
+                </div>
+            </div>
+        </div>
