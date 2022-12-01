@@ -1,0 +1,241 @@
+@mixin flipcard-size {
+    width: 14vw;
+    height: 22vw;
+    aspect-ratio: 7/11;
+}
+
+@mixin my-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin my-flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin Perpl_bawda {
+    border: solid 1vw purple;
+    border-radius: 1vw;
+}
+
+$color1: rgb(122, 63, 205);
+$color2: rgb(60, 206, 246);
+$color3: rgb(233, 216, 200);
+$stat-background: rgb(240, 195, 150);
+$header-color: rgb(33, 31, 39);
+$popup-background: rgba(244, 168, 168, 0.2);
+$glowing-font: rgb(240, 222, 178);
+$glowing-shadow: .2vh 0.1vh .3vh rgb(250, 234, 219);
+$name-shadow: 0.4vh 1.2vh 1vh rgb(17, 66, 90);
+$font1: "Raleway";
+$font2: "Red hat";
+$font3: "montserrat";
+$shadow1: 2px 2px 5px rgb(14, 16, 17);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-family: $font1, $font2, Arial;
+    align-items: center;
+    background: linear-gradient(to bottom right, turquoise, teal, purple, black);
+}
+
+.devcredit {
+    font: $font1;
+    font-weight: 100;
+    color: black;
+    text-shadow: $shadow1;
+    margin-top: 2vh;
+    font-size: 2vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+    width: 96vw;
+    background-color: rgb(33, 31, 39);
+    background-repeat: no-repeat;
+}
+
+.image {
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 85%;
+    margin-left: 5%;
+    top: 2vh;
+    z-index: 5;
+    width: 14;
+    box-shadow: rgba(248, 241, 191, 0.85) 28px 54px 94px 120px;
+}
+
+.image .logo {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: thin, rgb(124, 18, 66);
+    width: 14vw;
+    box-shadow: rgb(245, 231, 127) (0, 0, 0, 0.220.11) 0px 10px 10px;
+    z-index: 10;
+}
+
+.title-name {
+    width: 96vw;
+    max-height: 7% vh;
+    min-height: 6% vh;
+    text-align: end;
+    box-shadow: -.4vw 3vw 8vw 2vw black;
+    background: linear-gradient(to top right, rgb(244, 246, 235), rgb(174, 230, 246), rgb(60, 206, 246), rgb(3, 104, 132));
+    .name {
+        Font: "red hat", Montserrat, Arial;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 6vw;
+        color: rgb(233, 216, 200);
+        text-shadow: .5vw -0.2vh .4vw rgb(14, 16, 17);
+    }
+}
+
+.container {
+    height: fit-content;
+    margin-left: 15vw;
+    width: 81vw;
+    margin-right: 5vw;
+    .nav_links {
+        margin-left: 14vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom-right-radius: 3rem;
+        .a {
+            text-decoration: none;
+            padding-right: 3rem;
+            text-shadow: 6px 0px 18px rgb(122, 63, 205), 8px 1px 6px black;
+            color: rgb(122, 63, 205);
+            font-size: 3vw;
+            border-right: solid 2px rgb(122, 63, 205);
+            border-bottom: solid 2px rgb(122, 63, 205);
+            border-bottom-right-radius: 3rem;
+        }
+        #theman:hover {
+            transition: 0.52s;
+            color: rgb(240, 222, 178);
+            text-shadow: 4vw 4vw 1vw 3vw rgb(250, 234, 219);
+        }
+        #thepast:hover {
+            transition: 0.52s;
+            color: rgb(240, 222, 178);
+            text-shadow: 0.1 0.3vw 0.8vw 2.2vw rgb(250, 234, 219);
+        }
+        #thefuture:hover {
+            transition: 0.52s;
+            color: rgb(240, 222, 178);
+            text-shadow: 0 0.1vw .6vw 1.8vw rgb(250, 234, 219);
+        }
+        #connect:hover {
+            transition: 0.52s;
+            color: rgb(240, 222, 178);
+            text-shadow: 0 0.1vw .4vw 1.3vw rgb(250, 234, 219);
+        }
+    }
+}
+
+.container .a:hover {
+    transition: 0.52s;
+    color: rgb(240, 222, 178);
+    text-shadow: 0 0.1vw 1.1vw .3vw rgb(250, 234, 219);
+}
+
+p h1 {
+    font-family: Montserrat;
+    font-size: 4vw;
+    font-weight: 500;
+    margin: 4vw;
+    padding: .5vw;
+    position: relative;
+}
+
+.sudo-body {
+    font-family: 'Raleway', san serif;
+    font-size: 4em;
+    color: white;
+}
+
+.parallax-wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+}
+
+.intro-screen {
+    height: 100vh;
+    background-color: tomato;
+    @include my-flex-row;
+}
+
+.outro-screen {
+    height: 100vh;
+    background-color: teal;
+    @include my-flex-row;
+}
+
+.parallax-group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    .parallax-layer {
+        position: absolute;
+        inset: 0;
+        @include my-flex-row;
+    }
+    .base-layer {
+        //scale calc: 1+ ((Z transform value * -1) /perspective)
+        transform: translateZ(-300px) scale(2);
+    }
+    .mid-layer {
+        transform: translateZ(0) scale(1);
+    }
+    .top-layer {
+        transform: translateZ(300) scale(0);
+    }
+}
+
+#intro {
+    z-index: 0;
+}
+
+#group-1 {
+    z-index: -1;
+}
+
+#group-1>.base-layer {
+    background-color: crimson;
+}
+
+#group-2 {
+    background-color: crimson;
+}
+
+#group-2>.mid-layer {
+    background-color: lime;
+}
+
+#group-2>.top-layer {
+    background-color: crimson;
+}
+
+#outro {
+    background-color: crimson;
+}

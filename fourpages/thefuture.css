@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", "Red hat", Arial;
+  align-items: center;
+  background: linear-gradient(to bottom right, turquoise, teal, purple, black);
+}
+
+.devcredit {
+  font: "Raleway";
+  font-weight: 100;
+  color: black;
+  text-shadow: 2px 2px 5px rgb(14, 16, 17);
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+  width: 96vw;
+  background-color: rgb(33, 31, 39);
+  background-repeat: no-repeat;
+}
+
+.image {
+  border-radius: 50%;
+  position: absolute;
+  margin-right: 85%;
+  margin-left: 5%;
+  top: 2vh;
+  z-index: 5;
+  width: 14;
+  box-shadow: rgba(248, 241, 191, 0.85) 28px 54px 94px 120px;
+}
+
+.image .logo {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: thin, rgb(124, 18, 66);
+  width: 14vw;
+  box-shadow: rgb(245, 231, 127) 0, 0, 0, 0.22 0.11 0px 10px 10px;
+  z-index: 10;
+}
+
+.title-name {
+  width: 96vw;
+  max-height: 7% vh;
+  min-height: 6% vh;
+  text-align: end;
+  box-shadow: -0.4vw 3vw 8vw 2vw black;
+  background: linear-gradient(to top right, rgb(244, 246, 235), rgb(174, 230, 246), rgb(60, 206, 246), rgb(3, 104, 132));
+}
+.title-name .name {
+  Font: "red hat", Montserrat, Arial;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  font-size: 6vw;
+  color: rgb(233, 216, 200);
+  text-shadow: 0.5vw -0.2vh 0.4vw rgb(14, 16, 17);
+}
+
+.container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 15vw;
+  width: 81vw;
+  margin-right: 5vw;
+}
+.container .nav_links {
+  margin-left: 14vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-right-radius: 3rem;
+}
+.container .nav_links .a {
+  text-decoration: none;
+  padding-right: 3rem;
+  text-shadow: 6px 0px 18px rgb(122, 63, 205), 8px 1px 6px black;
+  color: rgb(122, 63, 205);
+  font-size: 3vw;
+  border-right: solid 2px rgb(122, 63, 205);
+  border-bottom: solid 2px rgb(122, 63, 205);
+  border-bottom-right-radius: 3rem;
+}
+.container .nav_links #theman:hover {
+  transition: 0.52s;
+  color: rgb(240, 222, 178);
+  text-shadow: 4vw 4vw 1vw 3vw rgb(250, 234, 219);
+}
+.container .nav_links #thepast:hover {
+  transition: 0.52s;
+  color: rgb(240, 222, 178);
+  text-shadow: 0.1 0.3vw 0.8vw 2.2vw rgb(250, 234, 219);
+}
+.container .nav_links #thefuture:hover {
+  transition: 0.52s;
+  color: rgb(240, 222, 178);
+  text-shadow: 0 0.1vw 0.6vw 1.8vw rgb(250, 234, 219);
+}
+.container .nav_links #connect:hover {
+  transition: 0.52s;
+  color: rgb(240, 222, 178);
+  text-shadow: 0 0.1vw 0.4vw 1.3vw rgb(250, 234, 219);
+}
+
+.container .a:hover {
+  transition: 0.52s;
+  color: rgb(240, 222, 178);
+  text-shadow: 0 0.1vw 1.1vw 0.3vw rgb(250, 234, 219);
+}
+
+p h1 {
+  font-family: Montserrat;
+  font-size: 4vw;
+  font-weight: 500;
+  margin: 4vw;
+  padding: 0.5vw;
+  position: relative;
+}
+
+.sudo-body {
+  font-family: "Raleway", san serif;
+  font-size: 4em;
+  color: white;
+}
+
+.parallax-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+.intro-screen {
+  height: 100vh;
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outro-screen {
+  height: 100vh;
+  background-color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.parallax-group .parallax-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parallax-group .base-layer {
+  transform: translateZ(-300px) scale(2);
+}
+.parallax-group .mid-layer {
+  transform: translateZ(0) scale(1);
+}
+.parallax-group .top-layer {
+  transform: translateZ(300) scale(0);
+}
+
+#intro {
+  z-index: 0;
+}
+
+#group-1 {
+  z-index: -1;
+}
+
+#group-1 > .base-layer {
+  background-color: crimson;
+}
+
+#group-2 {
+  background-color: crimson;
+}
+
+#group-2 > .mid-layer {
+  background-color: lime;
+}
+
+#group-2 > .top-layer {
+  background-color: crimson;
+}
+
+#outro {
+  background-color: crimson;
+}/*# sourceMappingURL=thefuture.css.map */
